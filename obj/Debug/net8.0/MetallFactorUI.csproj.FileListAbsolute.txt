@@ -28,3 +28,4 @@
 /home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/MetallFactorUI.genruntimeconfig.cache
 /home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/ref/MetallFactorUI.dll
 /home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/Components/Pages/Home.razor.rz.scp.css
+/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/MetallFactorUI.sourcelink.json
