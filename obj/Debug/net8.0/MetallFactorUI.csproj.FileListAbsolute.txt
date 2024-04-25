@@ -29,3 +29,9 @@
 /home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/ref/MetallFactorUI.dll
 /home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/Components/Pages/Home.razor.rz.scp.css
 /home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/MetallFactorUI.sourcelink.json
+/home/evgeny/Public/MetalFactor/MetallFactorUI/bin/Debug/net8.0/Microsoft.AspNetCore.Components.WebAssembly.dll
+/home/evgeny/Public/MetalFactor/MetallFactorUI/bin/Debug/net8.0/Microsoft.JSInterop.WebAssembly.dll
+/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/MetallFactorUI.csproj.AssemblyReference.cache
+/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/MetallFa.9919402E.Up2Date
+/home/evgeny/Public/MetalFactor/MetallFactorUI/bin/Debug/net8.0/Serilog.dll
+/home/evgeny/Public/MetalFactor/MetallFactorUI/bin/Debug/net8.0/Serilog.Sinks.Console.dll

@@ -1,4 +1,6 @@
 ﻿@page "/"
+@inject EmailService emailService
+
 
 <div class="container">
         <h1>Work Request Submission Form</h1>
@@ -33,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label>Email:</label>
-                    <InputText class="form-control" @bind-Value="email" />
+                    <InputText class="form-control" @bind-Value="exampleData" />
                 </div>                
                 <div class="form-group">
                     <label>Payment Methods:</label>
@@ -143,10 +145,37 @@ private bool arbitrationAgreement;
 private IBrowserFile file;
 private string additionalInfo;
 private bool formSubmitted = false;
+private string exampleData;
+private EmailRequestDTO emailRequest=null;
 
-    private void SubmitForm()
+    private async Task SubmitForm()
     {
         // Perform form submission logic here
         formSubmitted = true;
+
+        emailRequest = new EmailRequestDTO
+                {
+                    To = new[] { "recipient@example.com" },
+                    Subject = "Test Email",
+                    Body = "This is a test email."
+                };
+        ///
+        //_logger.Information("SubmitForm");
+        await emailService.SendEmailAsync(emailRequest);        
     }
+   
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Call an asynchronous method to fetch data
+    }
+    
+    protected override void OnInitialized()
+    {
+        
+        exampleData = "Test";// ExampleService.GetExampleData();
+        ///
+       
+    }
+
 }
