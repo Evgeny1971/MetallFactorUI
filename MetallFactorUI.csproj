@@ -1,20 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>0eb47f45-5934-4d56-9552-d6b3e6030947</UserSecretsId>
   </PropertyGroup>
 
  <ItemGroup>
-    <None Update="app.yaml">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </None>
-  </ItemGroup>
-
- <ItemGroup>
-   <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0" />
-   <PackageReference Include="Serilog" Version="3.1.1" />
-   <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
  </ItemGroup>
-</Project>
+ </Project>

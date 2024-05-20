@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("0eb47f45-5934-4d56-9552-d6b3e6030947")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MetallFactorUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0792a1017f120409f0e22683832e61287b2d16c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c85bae747728404aec2ba992573c27ff7801b9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MetallFactorUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MetallFactorUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

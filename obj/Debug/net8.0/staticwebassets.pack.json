@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/MetallFactorUI.bundle.scp.css",
+      "Id": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/MetallFactorUI.bundle.scp.css",
       "PackagePath": "staticwebassets/MetallFactorUI.bundle.scp.css"
     },
     {
-      "Id": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/app.css",
+      "Id": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css",
+      "Id": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Id": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/favicon.png",
+      "Id": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {

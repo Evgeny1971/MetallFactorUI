@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D70l2UmhoUtLusoJiREON84ta9XxQz3UzRy7uB1Z/ps=",
+  "Hash": "DsnZdUunHi5gpu481KBXZEzq3U7MINCj/nDkikyBwtU=",
   "Source": "MetallFactorUI",
   "BasePath": "_content/MetallFactorUI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MetallFactorUI/wwwroot",
       "Source": "MetallFactorUI",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/",
       "BasePath": "_content/MetallFactorUI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/bundle/MetallFactorUI.styles.css",
+      "Identity": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/bundle/MetallFactorUI.styles.css",
       "SourceId": "MetallFactorUI",
       "SourceType": "Computed",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/MetallFactorUI",
       "RelativePath": "MetallFactorUI.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/bundle/MetallFactorUI.styles.css"
+      "OriginalItemSpec": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/bundle/MetallFactorUI.styles.css"
     },
     {
-      "Identity": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/MetallFactorUI.bundle.scp.css",
+      "Identity": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/MetallFactorUI.bundle.scp.css",
       "SourceId": "MetallFactorUI",
       "SourceType": "Computed",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/MetallFactorUI",
       "RelativePath": "MetallFactorUI.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/MetallFactorUI.bundle.scp.css"
+      "OriginalItemSpec": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/Debug/net8.0/scopedcss/projectbundle/MetallFactorUI.bundle.scp.css"
     },
     {
-      "Identity": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/app.css",
+      "Identity": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/app.css",
       "SourceId": "MetallFactorUI",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/",
       "BasePath": "_content/MetallFactorUI",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "MetallFactorUI",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/",
       "BasePath": "_content/MetallFactorUI",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "MetallFactorUI",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/",
       "BasePath": "_content/MetallFactorUI",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/favicon.png",
+      "Identity": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/favicon.png",
       "SourceId": "MetallFactorUI",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/evgeny/Public/MetalFactor/MetallFactorUI/wwwroot/",
+      "ContentRoot": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/wwwroot/",
       "BasePath": "_content/MetallFactorUI",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

@@ -2,7 +2,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Diagnostics.CodeAnalysis;
-using Serilog;
+//using Serilog;
 
 
 public class EmailService
@@ -21,8 +21,10 @@ public class EmailService
     public async Task SendEmailAsync(EmailRequestDTO request)
     {
         Console.WriteLine( "Hello, world!");
-        _logger.LogInformation($"Email sent to {request.To[0]} with subject: {request.Subject}");
-        return;
+        //_logger.LogInformation($"Email sent to {request.To[0]} with subject: {request.Subject}");
+        _logger.LogInformation($"Email sent to gen with subject: {request.Subject}");
+
+        //return;
         // Call the Web API endpoint to send the email
         var response = await _httpClient.PostAsJsonAsync("email-send", request);
         response.EnsureSuccessStatusCode(); // Ensure success status code (2xx)

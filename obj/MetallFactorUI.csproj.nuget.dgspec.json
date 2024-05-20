@@ -1,25 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "/home/evgeny/Public/MetalFactor/MetallFactorUI/MetallFactorUI.csproj": {}
+    "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj": {}
   },
   "projects": {
-    "/home/evgeny/Public/MetalFactor/MetallFactorUI/MetallFactorUI.csproj": {
+    "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/evgeny/Public/MetalFactor/MetallFactorUI/MetallFactorUI.csproj",
+        "projectUniqueName": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj",
         "projectName": "MetallFactorUI",
-        "projectPath": "/home/evgeny/Public/MetalFactor/MetallFactorUI/MetallFactorUI.csproj",
+        "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj",
         "packagesPath": "/home/evgeny/.nuget/packages/",
-        "outputPath": "/home/evgeny/Public/MetalFactor/MetallFactorUI/obj/",
+        "outputPath": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "CentralPackageTransitivePinningEnabled": true,
         "configFilePaths": [
+          "/home/evgeny/Public/eShopOnAzure-1/nuget.config",
           "/home/evgeny/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -29,6 +33,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -45,16 +50,74 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "Serilog.Sinks.Console": {
-              "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[8.0.4, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "Aspire.Azure.AI.OpenAI": "8.0.0-preview.7.24251.11",
+            "Aspire.Azure.Messaging.ServiceBus": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.AppHost": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.Azure": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.Azure.ApplicationInsights": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.Azure.CognitiveServices": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.Azure.ServiceBus": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.PostgreSQL": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.RabbitMQ": "8.0.0-preview.7.24251.11",
+            "Aspire.Hosting.Redis": "8.0.0-preview.7.24251.11",
+            "Aspire.Npgsql": "8.0.0-preview.7.24251.11",
+            "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0-preview.7.24251.11",
+            "Aspire.StackExchange.Redis": "8.0.0-preview.7.24251.11",
+            "AspNetCore.HealthChecks.AzureServiceBus": "8.0.1",
+            "AspNetCore.HealthChecks.Uris": "8.0.1",
+            "Automapper": "13.0.1",
+            "Azure.Monitor.OpenTelemetry.AspNetCore": "1.1.1",
+            "Dapper": "2.1.35",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "Grpc.AspNetCore": "2.62.0",
+            "Grpc.AspNetCore.Server.ClientFactory": "2.62.0",
+            "Grpc.Tools": "2.62.0",
+            "MediatR": "12.2.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.4",
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.4",
+            "Microsoft.AspNetCore.Components.QuickGrid": "8.0.4",
+            "Microsoft.AspNetCore.Components.Web": "8.0.4",
+            "Microsoft.AspNetCore.Components.WebAssembly": "8.0.4",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
+            "Microsoft.AspNetCore.Identity.UI": "8.0.4",
+            "Microsoft.AspNetCore.Mvc.Testing": "8.0.4",
+            "Microsoft.AspNetCore.OpenApi": "8.0.4",
+            "Microsoft.AspNetCore.TestHost": "8.0.4",
+            "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
+            "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
+            "Microsoft.Extensions.Http.Resilience": "8.4.0",
+            "Microsoft.Extensions.Identity.Stores": "8.0.4",
+            "Microsoft.Extensions.Options": "8.0.2",
+            "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "8.0.0-preview.7.24251.11",
+            "Microsoft.Extensions.ServiceDiscovery.Yarp": "8.0.0-preview.7.24251.11",
+            "Microsoft.Identity.Web": "2.18.1",
+            "Microsoft.NET.Test.Sdk": "17.9.0",
+            "Microsoft.SemanticKernel": "1.10.0",
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.0-rc.1.23461.3",
+            "Microsoft.Web.LibraryManager.Build": "2.1.175",
+            "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
+            "NSubstitute": "5.1.0",
+            "NSubstitute.Analyzers.CSharp": "1.0.17",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.8.1",
+            "OpenTelemetry.Extensions.Hosting": "1.8.1",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.8.1",
+            "OpenTelemetry.Instrumentation.GrpcNetClient": "1.6.0-beta.3",
+            "OpenTelemetry.Instrumentation.Http": "1.8.1",
+            "OpenTelemetry.Instrumentation.Runtime": "1.8.0",
+            "Pgvector": "0.2.0",
+            "Pgvector.EntityFrameworkCore": "0.2.0",
+            "Polly": "8.3.1",
+            "Swashbuckle.AspNetCore": "6.5.0",
+            "System.Reflection.TypeExtensions": "4.7.0",
+            "xunit": "2.8.0",
+            "xunit.runner.visualstudio": "2.8.0",
+            "Yarp.ReverseProxy": "2.1.0"
           },
           "imports": [
             "net461",
@@ -75,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/241/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

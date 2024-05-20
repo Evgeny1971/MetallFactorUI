@@ -1,5 +1,9 @@
-﻿@page "/"
+﻿@using Microsoft.JSInterop
+@page "/"
+@rendermode InteractiveServer
 @inject EmailService emailService
+@inject ILogger<Home> _logger 
+@inject IJSRuntime JSRuntime
 
 
 <div class="container">
@@ -128,27 +132,28 @@
 
 @code {
     // Define your model properties here
-private string selectedCategory;
-private string selectedBudgetRange;
-private string shippingAddress;
-private string shippingCity;
-private string shippingState;
+private string? selectedCategory;
+private string? selectedBudgetRange;
+private string? shippingAddress;
+private string? shippingCity;
+private string? shippingState;
 private int quantity;
-private string email;
-private string selectedPaymentMethod;
-private string selectedMaterialSource;
-private string selectedDeliveryOption;
+//private string email;
+private string? selectedPaymentMethod;
+private string? selectedMaterialSource;
+private string? selectedDeliveryOption;
 private DateTime deliveryDeadline;
 private bool penaltyAgreement;
 private bool bonusAgreement;
 private bool arbitrationAgreement;
-private IBrowserFile file;
-private string additionalInfo;
-private bool formSubmitted = false;
-private string exampleData;
-private EmailRequestDTO emailRequest=null;
+private IBrowserFile? file;
+private string? additionalInfo;
+//private bool formSubmitted = false;
+private string? exampleData;
+private EmailRequestDTO? emailRequest;
 
-    private async Task SubmitForm()
+/*
+    protected  async Task test()
     {
         // Perform form submission logic here
         formSubmitted = true;
@@ -160,22 +165,50 @@ private EmailRequestDTO emailRequest=null;
                     Body = "This is a test email."
                 };
         ///
-        //_logger.Information("SubmitForm");
+        _logger.LogInformation("SubmitForm");
         await emailService.SendEmailAsync(emailRequest);        
     }
-   
+  */ 
+protected async Task SubmitForm()
+{
+    // Perform form submission logic here
+    //formSubmitted = true;
 
-    protected override async Task OnInitializedAsync()
+    emailRequest = new EmailRequestDTO
     {
-        // Call an asynchronous method to fetch data
-    }
+        To = new[] { "recipient@example.com" },
+        Subject = "Test Email",
+        Body = "This is a test email."
+    };
+
+    _logger.LogInformation("SubmitForm");
+    await emailService.SendEmailAsync(emailRequest);
+}
+
+
     
     protected override void OnInitialized()
     {
         
         exampleData = "Test";// ExampleService.GetExampleData();
+                _logger.LogInformation("OnInitialized");
+
         ///
        
+    }
+    ///
+    protected override void OnAfterRender(bool firstRender)
+    {
+          // Display an alert after form submission
+        // await JSRuntime.InvokeVoidAsync("alert", "Email sent successfully!");
+        if (firstRender)
+        {
+            _logger.LogInformation($"Component rendered successfully,{firstRender} ");
+        }
+        else
+        {
+            _logger.LogInformation($"Component else rendered successfully,{firstRender} ");            
+        }
     }
 
 }

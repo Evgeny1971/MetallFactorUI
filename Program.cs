@@ -6,20 +6,21 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Serilog;
-using Serilog.Events;
+//using Serilog;
+//using Serilog.Events;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog for logging
-    builder.Logging.ClearProviders(); // Clear other logging providers
+//builder.Logging.ClearProviders(); // Clear other logging providers
 
+/*
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
    // builder.Logging.AddSerilog(Log.Logger);
-
+*/
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 //builder.Services.AddScoped<EmailService>();
 builder.Services.AddHttpClient<EmailService>(o => o.BaseAddress = new("http://localhost:5047/api/"));
