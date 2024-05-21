@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MetallFactorUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c85bae747728404aec2ba992573c27ff7801b9c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34ab323b4a841a23f57a75551d3d42cf4d85b174")]
 [assembly: System.Reflection.AssemblyProductAttribute("MetallFactorUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MetallFactorUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

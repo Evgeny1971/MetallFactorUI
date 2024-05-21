@@ -5,9 +5,31 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>0eb47f45-5934-4d56-9552-d6b3e6030947</UserSecretsId>
+    <RootNamespace>eShop.MetallFactorUI</RootNamespace>
+
   </PropertyGroup>
 
  <ItemGroup>
      <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
  </ItemGroup>
+
+ <ItemGroup>
+    <ProjectReference Include="..\eShop.ServiceDefaults\eShop.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\WebAppComponents\WebAppComponents.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Azure.AI.OpenAI" />
+    <PackageReference Include="Microsoft.Extensions.ServiceDiscovery.Yarp" />
+    <PackageReference Include="Microsoft.SemanticKernel" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+    <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" />
+    <PackageReference Include="Grpc.Tools" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Identity.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Basket.API\Proto\basket.proto" GrpcServices="Client" />
+  </ItemGroup>
+
  </Project>
