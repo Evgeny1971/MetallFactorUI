@@ -1,19 +1,22 @@
 ﻿@using Microsoft.JSInterop
+@using eShop.MetallFactorUI.Services;
+@using eShop.MetallFactorUI.Model;
+
+@page "/{id:int}" 
 @page "/"
+
 @rendermode InteractiveServer
 @inject EmailService emailService
+@inject CacheService CacheService
 @inject ILogger<Home> _logger 
 @inject IJSRuntime JSRuntime
 
 
 <div class="container">
-        <h1>Work Request Submission Form</h1>
-
     <div class="checkout">
         <div class="form">
             <div class="form-section">
                 <h2>Work Request Details</h2>
-
                 <div class="form-group">
                     <label>Producer Categories:</label>
                     <select class="form-control" @bind="selectedCategory">
@@ -132,44 +135,98 @@
 
 @code {
     // Define your model properties here
-private string? selectedCategory;
-private string? selectedBudgetRange;
-private string? shippingAddress;
-private string? shippingCity;
-private string? shippingState;
-private int quantity;
-//private string email;
-private string? selectedPaymentMethod;
-private string? selectedMaterialSource;
-private string? selectedDeliveryOption;
-private DateTime deliveryDeadline;
-private bool penaltyAgreement;
-private bool bonusAgreement;
-private bool arbitrationAgreement;
-private IBrowserFile? file;
-private string? additionalInfo;
-//private bool formSubmitted = false;
-private string? exampleData;
-private EmailRequestDTO? emailRequest;
+    [Parameter]
+    public int? id { get; set; }
+    private string? selectedCategory;
+    private string? selectedBudgetRange;
+    private string? shippingAddress;
+    private string? shippingCity;
+    private string? shippingState;
+    private int quantity;
+    //private string email;
+    private string? selectedPaymentMethod;
+    private string? selectedMaterialSource;
+    private string? selectedDeliveryOption;
+    private DateTime deliveryDeadline;
+    private bool penaltyAgreement;
+    private bool bonusAgreement;
+    private bool arbitrationAgreement;
+    private IBrowserFile? file;
+    private string? additionalInfo;
+    //private bool formSubmitted = false;
+    private string? exampleData;
+    private EmailRequestDTO? emailRequest;
+    private string cacheKey = "unique-id";
+    private int id_local;
 
-/*
-    protected  async Task test()
+
+    /// this event occurrence first
+    protected override void OnInitialized()
     {
-        // Perform form submission logic here
-        formSubmitted = true;
+        /// if new increment cache.count
+        id_local =(id.HasValue? id.Value: CacheService.Count+1);
+        cacheKey = $"cach_key_id_{id_local}";
+        
+        //id=0;
+        if(id.HasValue)
+        {
+            //exampleData = "Test";// ExampleService.GetExampleData();
+            _logger.LogInformation($"OnInitialized, cacheKey:{cacheKey}");
+            WorkRequest? workRequest = CacheService.Get<WorkRequest>(cacheKey) as WorkRequest;
+            if(workRequest != null)
+            {
+                _logger.LogInformation("workRequest is not null");
 
-        emailRequest = new EmailRequestDTO
-                {
-                    To = new[] { "recipient@example.com" },
-                    Subject = "Test Email",
-                    Body = "This is a test email."
-                };
-        ///
-        _logger.LogInformation("SubmitForm");
-        await emailService.SendEmailAsync(emailRequest);        
+                selectedCategory = workRequest.SelectedCategory;
+                selectedBudgetRange = workRequest.SelectedBudgetRange;
+                quantity = workRequest.Quantity;
+                exampleData = workRequest.ExampleData;
+                selectedPaymentMethod = workRequest.SelectedPaymentMethod;
+                selectedMaterialSource = workRequest.SelectedMaterialSource;
+                selectedDeliveryOption = workRequest.SelectedDeliveryOption;
+                deliveryDeadline = workRequest.DeliveryDeadline;
+                penaltyAgreement = workRequest.PenaltyAgreement;
+                bonusAgreement = workRequest.BonusAgreement;
+                arbitrationAgreement = workRequest.ArbitrationAgreement;
+                additionalInfo = workRequest.AdditionalInfo;
+                shippingAddress = workRequest.ShippingAddress;
+                shippingCity = workRequest.ShippingCity;
+                shippingState = workRequest.ShippingState;
+            }
+        }
+       ///
+ }
+ 
+    private async Task SubmitForm()
+    {
+        WorkRequest workRequest = new WorkRequest
+           {
+            SelectedCategory = selectedCategory,
+            SelectedBudgetRange = selectedBudgetRange,
+            Quantity = quantity,
+            ExampleData = exampleData,
+            SelectedPaymentMethod = selectedPaymentMethod,
+            SelectedMaterialSource = selectedMaterialSource,
+            SelectedDeliveryOption = selectedDeliveryOption,
+            DeliveryDeadline = deliveryDeadline,
+            PenaltyAgreement = penaltyAgreement,
+            BonusAgreement = bonusAgreement,
+            ArbitrationAgreement = arbitrationAgreement,
+            AdditionalInfo = additionalInfo,
+            ShippingAddress = shippingAddress,
+            ShippingCity = shippingCity,
+            ShippingState = shippingState
+        };
+        _logger.LogInformation($"cacheKey before insert into cache:{cacheKey}");
+
+         CacheService.Set(cacheKey, workRequest, TimeSpan.FromMinutes(10));
+
+        _logger.LogInformation($"cacheKey after insert into cache:{cacheKey}");
+
+        await Task.FromResult<string>("Test");
     }
-  */ 
-protected async Task SubmitForm()
+
+protected async Task SubmitForm1()
 {
     // Perform form submission logic here
     //formSubmitted = true;
@@ -186,16 +243,6 @@ protected async Task SubmitForm()
 }
 
 
-    
-    protected override void OnInitialized()
-    {
-        
-        exampleData = "Test";// ExampleService.GetExampleData();
-                _logger.LogInformation("OnInitialized");
-
-        ///
-       
-    }
     ///
     protected override void OnAfterRender(bool firstRender)
     {
@@ -207,8 +254,28 @@ protected async Task SubmitForm()
         }
         else
         {
+            // Try to get the data from the cache
             _logger.LogInformation($"Component else rendered successfully,{firstRender} ");            
         }
     }
+
+    /*
+    protected  async Task test()
+    {
+        // Perform form submission logic here
+        formSubmitted = true;
+
+        emailRequest = new EmailRequestDTO
+                {
+                    To = new[] { "recipient@example.com" },
+                    Subject = "Test Email",
+                    Body = "This is a test email."
+                };
+        ///
+        _logger.LogInformation("SubmitForm");
+        await emailService.SendEmailAsync(emailRequest);        
+    }
+  */ 
+
 
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj": {}
+    "/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/MetallFactorUI.csproj": {}
   },
   "projects": {
-    "/home/evgeny/Public/eShopOnAzure-1/src/EventBus/EventBus.csproj": {
+    "/home/evgenyv/Public/eMetalworking-4/src/EventBus/EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/evgeny/Public/eShopOnAzure-1/src/EventBus/EventBus.csproj",
+        "projectUniqueName": "/home/evgenyv/Public/eMetalworking-4/src/EventBus/EventBus.csproj",
         "projectName": "EventBus",
-        "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/EventBus/EventBus.csproj",
-        "packagesPath": "/home/evgeny/.nuget/packages/",
-        "outputPath": "/home/evgeny/Public/eShopOnAzure-1/src/EventBus/obj/",
+        "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/EventBus/EventBus.csproj",
+        "packagesPath": "/home/evgenyv/.nuget/packages/",
+        "outputPath": "/home/evgenyv/Public/eMetalworking-4/src/EventBus/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
         "configFilePaths": [
-          "/home/evgeny/Public/eShopOnAzure-1/nuget.config",
-          "/home/evgeny/.nuget/NuGet/NuGet.Config"
+          "/home/evgenyv/Public/eMetalworking-4/nuget.config",
+          "/home/evgenyv/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -61,7 +61,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )",
+              "version": "[8.0.6, )",
               "autoReferenced": true
             }
           },
@@ -99,6 +99,8 @@
             "Microsoft.AspNetCore.Mvc.Testing": "8.0.4",
             "Microsoft.AspNetCore.OpenApi": "8.0.4",
             "Microsoft.AspNetCore.TestHost": "8.0.4",
+            "Microsoft.EntityFrameworkCore": "8.0.6",
+            "Microsoft.EntityFrameworkCore.Design": "8.0.6",
             "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
             "Microsoft.Extensions.Http.Resilience": "8.4.0",
@@ -146,24 +148,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/evgeny/Public/eShopOnAzure-1/src/EventBusServiceBus/EventBusServiceBus.csproj": {
+    "/home/evgenyv/Public/eMetalworking-4/src/EventBusServiceBus/EventBusServiceBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/evgeny/Public/eShopOnAzure-1/src/EventBusServiceBus/EventBusServiceBus.csproj",
+        "projectUniqueName": "/home/evgenyv/Public/eMetalworking-4/src/EventBusServiceBus/EventBusServiceBus.csproj",
         "projectName": "EventBusServiceBus",
-        "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/EventBusServiceBus/EventBusServiceBus.csproj",
-        "packagesPath": "/home/evgeny/.nuget/packages/",
-        "outputPath": "/home/evgeny/Public/eShopOnAzure-1/src/EventBusServiceBus/obj/",
+        "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/EventBusServiceBus/EventBusServiceBus.csproj",
+        "packagesPath": "/home/evgenyv/.nuget/packages/",
+        "outputPath": "/home/evgenyv/Public/eMetalworking-4/src/EventBusServiceBus/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
         "configFilePaths": [
-          "/home/evgeny/Public/eShopOnAzure-1/nuget.config",
-          "/home/evgeny/.nuget/NuGet/NuGet.Config"
+          "/home/evgenyv/Public/eMetalworking-4/nuget.config",
+          "/home/evgenyv/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -176,8 +178,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/evgeny/Public/eShopOnAzure-1/src/EventBus/EventBus.csproj": {
-                "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/EventBus/EventBus.csproj"
+              "/home/evgenyv/Public/eMetalworking-4/src/EventBus/EventBus.csproj": {
+                "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/EventBus/EventBus.csproj"
               }
             }
           }
@@ -243,6 +245,8 @@
             "Microsoft.AspNetCore.Mvc.Testing": "8.0.4",
             "Microsoft.AspNetCore.OpenApi": "8.0.4",
             "Microsoft.AspNetCore.TestHost": "8.0.4",
+            "Microsoft.EntityFrameworkCore": "8.0.6",
+            "Microsoft.EntityFrameworkCore.Design": "8.0.6",
             "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
             "Microsoft.Extensions.Http.Resilience": "8.4.0",
@@ -290,24 +294,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj": {
+    "/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/MetallFactorUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj",
+        "projectUniqueName": "/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/MetallFactorUI.csproj",
         "projectName": "MetallFactorUI",
-        "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/MetallFactorUI.csproj",
-        "packagesPath": "/home/evgeny/.nuget/packages/",
-        "outputPath": "/home/evgeny/Public/eShopOnAzure-1/src/MetallFactorUI/obj/",
+        "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/MetallFactorUI.csproj",
+        "packagesPath": "/home/evgenyv/.nuget/packages/",
+        "outputPath": "/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
         "configFilePaths": [
-          "/home/evgeny/Public/eShopOnAzure-1/nuget.config",
-          "/home/evgeny/.nuget/NuGet/NuGet.Config"
+          "/home/evgenyv/Public/eMetalworking-4/nuget.config",
+          "/home/evgenyv/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -320,11 +324,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/evgeny/Public/eShopOnAzure-1/src/WebAppComponents/WebAppComponents.csproj": {
-                "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/WebAppComponents/WebAppComponents.csproj"
+              "/home/evgenyv/Public/eMetalworking-4/src/WebAppComponents/WebAppComponents.csproj": {
+                "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/WebAppComponents/WebAppComponents.csproj"
               },
-              "/home/evgeny/Public/eShopOnAzure-1/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj": {
-                "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              "/home/evgenyv/Public/eMetalworking-4/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj": {
+                "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
               }
             }
           }
@@ -371,6 +375,16 @@
               "version": "[8.0.4, )",
               "versionCentrallyManaged": true
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )",
+              "versionCentrallyManaged": true
+            },
             "Microsoft.Extensions.ServiceDiscovery.Yarp": {
               "target": "Package",
               "version": "[8.0.0-preview.7.24251.11, )",
@@ -384,6 +398,11 @@
             "Microsoft.SemanticKernel": {
               "target": "Package",
               "version": "[1.10.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )",
               "versionCentrallyManaged": true
             }
           },
@@ -421,6 +440,8 @@
             "Microsoft.AspNetCore.Mvc.Testing": "8.0.4",
             "Microsoft.AspNetCore.OpenApi": "8.0.4",
             "Microsoft.AspNetCore.TestHost": "8.0.4",
+            "Microsoft.EntityFrameworkCore": "8.0.6",
+            "Microsoft.EntityFrameworkCore.Design": "8.0.6",
             "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
             "Microsoft.Extensions.Http.Resilience": "8.4.0",
@@ -471,24 +492,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/evgeny/Public/eShopOnAzure-1/src/WebAppComponents/WebAppComponents.csproj": {
+    "/home/evgenyv/Public/eMetalworking-4/src/WebAppComponents/WebAppComponents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/evgeny/Public/eShopOnAzure-1/src/WebAppComponents/WebAppComponents.csproj",
+        "projectUniqueName": "/home/evgenyv/Public/eMetalworking-4/src/WebAppComponents/WebAppComponents.csproj",
         "projectName": "WebAppComponents",
-        "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/WebAppComponents/WebAppComponents.csproj",
-        "packagesPath": "/home/evgeny/.nuget/packages/",
-        "outputPath": "/home/evgeny/Public/eShopOnAzure-1/src/WebAppComponents/obj/",
+        "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/WebAppComponents/WebAppComponents.csproj",
+        "packagesPath": "/home/evgenyv/.nuget/packages/",
+        "outputPath": "/home/evgenyv/Public/eMetalworking-4/src/WebAppComponents/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
         "configFilePaths": [
-          "/home/evgeny/Public/eShopOnAzure-1/nuget.config",
-          "/home/evgeny/.nuget/NuGet/NuGet.Config"
+          "/home/evgenyv/Public/eMetalworking-4/nuget.config",
+          "/home/evgenyv/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -559,6 +580,8 @@
             "Microsoft.AspNetCore.Mvc.Testing": "8.0.4",
             "Microsoft.AspNetCore.OpenApi": "8.0.4",
             "Microsoft.AspNetCore.TestHost": "8.0.4",
+            "Microsoft.EntityFrameworkCore": "8.0.6",
+            "Microsoft.EntityFrameworkCore.Design": "8.0.6",
             "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
             "Microsoft.Extensions.Http.Resilience": "8.4.0",
@@ -606,24 +629,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/evgeny/Public/eShopOnAzure-1/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj": {
+    "/home/evgenyv/Public/eMetalworking-4/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/evgeny/Public/eShopOnAzure-1/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj",
+        "projectUniqueName": "/home/evgenyv/Public/eMetalworking-4/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj",
         "projectName": "eShop.ServiceDefaults",
-        "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj",
-        "packagesPath": "/home/evgeny/.nuget/packages/",
-        "outputPath": "/home/evgeny/Public/eShopOnAzure-1/src/eShop.ServiceDefaults/obj/",
+        "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj",
+        "packagesPath": "/home/evgenyv/.nuget/packages/",
+        "outputPath": "/home/evgenyv/Public/eMetalworking-4/src/eShop.ServiceDefaults/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
         "configFilePaths": [
-          "/home/evgeny/Public/eShopOnAzure-1/nuget.config",
-          "/home/evgeny/.nuget/NuGet/NuGet.Config"
+          "/home/evgenyv/Public/eMetalworking-4/nuget.config",
+          "/home/evgenyv/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -636,8 +659,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/evgeny/Public/eShopOnAzure-1/src/EventBusServiceBus/EventBusServiceBus.csproj": {
-                "projectPath": "/home/evgeny/Public/eShopOnAzure-1/src/EventBusServiceBus/EventBusServiceBus.csproj"
+              "/home/evgenyv/Public/eMetalworking-4/src/EventBusServiceBus/EventBusServiceBus.csproj": {
+                "projectPath": "/home/evgenyv/Public/eMetalworking-4/src/EventBusServiceBus/EventBusServiceBus.csproj"
               }
             }
           }
@@ -758,6 +781,8 @@
             "Microsoft.AspNetCore.Mvc.Testing": "8.0.4",
             "Microsoft.AspNetCore.OpenApi": "8.0.4",
             "Microsoft.AspNetCore.TestHost": "8.0.4",
+            "Microsoft.EntityFrameworkCore": "8.0.6",
+            "Microsoft.EntityFrameworkCore.Design": "8.0.6",
             "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
             "Microsoft.Extensions.Http.Resilience": "8.4.0",
@@ -808,7 +833,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

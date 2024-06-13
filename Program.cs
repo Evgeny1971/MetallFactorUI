@@ -1,6 +1,5 @@
 using eShop.MetallFactorUI.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
@@ -10,6 +9,10 @@ using Microsoft.AspNetCore.Hosting;
 //using Serilog;
 //using Serilog.Events;
 using Microsoft.Extensions.Hosting;
+using MetallFactorUI.Infrastructure;
+using eShop.MetallFactorUI.Services;
+
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +28,20 @@ Log.Logger = new LoggerConfiguration()
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 //builder.Services.AddScoped<EmailService>();
 builder.Services.AddHttpClient<EmailService>(o => o.BaseAddress = new("http://localhost:5047/api/"));
+
+builder.Services.AddSingleton<CacheService>();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("WorkRequestDB")));
+/*
+        builder.AddNpgsqlDbContext<AppDbContext>("catalogdb", configureDbContextOptions: dbContextOptionsBuilder =>
+        {
+            dbContextOptionsBuilder.UseNpgsql(builder =>
+            {
+                builder.UseVector();
+            });
+        });
+*/
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
