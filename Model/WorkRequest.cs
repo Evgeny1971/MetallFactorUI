@@ -1,4 +1,4 @@
-namespace MetallFactorUI.Model
+namespace eShop.MetallFactorUI.Model
 {
     public class WorkRequest
     {

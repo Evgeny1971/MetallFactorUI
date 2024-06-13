@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Diagnostics.CodeAnalysis;
 //using Serilog;
 
+namespace eShop.MetallFactorUI.Services;
 
 public class EmailService
 {

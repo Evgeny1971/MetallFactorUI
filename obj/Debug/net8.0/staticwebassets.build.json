@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2sQlDVXKv8z83i9ZR+vJMNRIJpPqKkBs/YMQoblwuDY=",
+  "Hash": "JRL6GyC5eIcH63HvNkYgJnd56/shIdBusEukniM7D2s=",
   "Source": "MetallFactorUI",
   "BasePath": "_content/MetallFactorUI",
   "Mode": "Default",
@@ -12,10 +12,10 @@
       "Source": "WebAppComponents",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;Configuration;Platform;TargetFramework;RuntimeIdentifier;SelfContained",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
       "AdditionalBuildProperties": "",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;Configuration;Platform;TargetFramework;RuntimeIdentifier;SelfContained"
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
   "DiscoveryPatterns": [

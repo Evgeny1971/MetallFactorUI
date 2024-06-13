@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using MetallFactorUI.Model;
+using eShop.MetallFactorUI.Model;
 
 namespace MetallFactorUI.Infrastructure
 {
