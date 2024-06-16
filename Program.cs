@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 //using Serilog.Events;
 using Microsoft.Extensions.Hosting;
 using MetallFactorUI.Infrastructure;
-using eShop.MetallFactorUI.Services;
+using eShop.ServiceDefaults;
 
 using Microsoft.EntityFrameworkCore;
 

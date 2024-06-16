@@ -9,67 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = eShop.MetallFactorUI
 build_property.RootNamespace = eShop.MetallFactorUI
-build_property.ProjectDir = /home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/
+build_property.ProjectDir = /home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI
+build_property.MSBuildProjectDirectory = /home/evgeny/Public/eMetalworking-4/src/MetallFactorUI
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/App.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Counter.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Error.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Weather.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Routes.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/_Imports.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/CartMenu.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/CartMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvQ2FydE1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-aw2iiniw4v
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/FooterBar.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/FooterBar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvRm9vdGVyQmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-jawthkenwh
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/HeaderBar.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/HeaderBar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvSGVhZGVyQmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-kqq55d7w9m
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/MainLayout.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-wai5x92dgw
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/UserMenu.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout/UserMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvVXNlck1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tyhinw2m1g
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout_old/MainLayout.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout_old/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXRfb2xkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-uh63xf01on
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout_old/NavMenu.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Layout_old/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXRfb2xkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-eyc317oz4a
 
-[/home/evgenyv/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Home.razor]
+[/home/evgeny/Public/eMetalworking-4/src/MetallFactorUI/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-nwuvwr4ur2
