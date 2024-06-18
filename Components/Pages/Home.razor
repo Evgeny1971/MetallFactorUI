@@ -1,6 +1,6 @@
 ﻿@using Microsoft.JSInterop
-@using eShop.ServiceDefaults;
-@using eShop.MetallFactorUI.Model;
+@using eShop.ServiceDefaults
+@using eShop.MetallFactorUI.Model
 
 @page "/{id:int}" 
 @page "/"
@@ -10,67 +10,99 @@
 @inject ILogger<Home> _logger 
 @inject IJSRuntime JSRuntime
 
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .form-section {
+        margin-bottom: 30px;
+    }
 
-<div class="container">
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control, .form-check-input, .form-check-label {
+        font-size: 1.1em;
+    }
+
+    .form-check-label {
+        margin-left: 5px;
+    }
+
+    .btn-primary {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+</style>
+
+<div class="container mt-5">
     <div class="checkout">
         <div class="form">
             <div class="form-section">
-                <h2>Work Request Details</h2>
+                <h2 class="mb-4">Work Request Details</h2>
+                
                 <div class="form-group">
                     <label>Producer Categories:</label>
-                    <select class="form-control" @bind="selectedCategory">
-                        <option value="">Select a category</option>
-                        <option value="Welding">Welding</option>
-                        <option value="Metalworking">Metalworking</option>
-                        <option value="Sewing">Sewing</option>
-                    </select>
+                    @foreach (var category in categories)
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="category-@category" name="category" value="@category" @onchange="(e) => selectedCategory = category" checked="@(selectedCategory == category)" />
+                            <label class="form-check-label" for="category-@category">@category</label>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group">
                     <label>Budget Range Selection:</label>
-                    <select class="form-control" @bind="selectedBudgetRange">
-                        <option value="">Select a budget range</option>
-                        <option value="Under $1,000">Under $1,000</option>
-                        <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                    </select>
+                    @foreach (var budget in budgetRanges)
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="budget-@budget" name="budget" value="@budget" @onchange="(e) => selectedBudgetRange = budget" checked="@(selectedBudgetRange == budget)" />
+                            <label class="form-check-label" for="budget-@budget">@budget</label>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group">
                     <label>Quantity Specification:</label>
                     <InputNumber class="form-control" @bind-Value="quantity" />
                 </div>
+                
                 <div class="form-group">
                     <label>Email:</label>
                     <InputText class="form-control" @bind-Value="exampleData" />
-                </div>                
+                </div> 
+
                 <div class="form-group">
                     <label>Payment Methods:</label>
-                    <select class="form-control" @bind="selectedPaymentMethod">
-                        <option value="">Select a payment method</option>
-                        <option value="Prepayment">Prepayment</option>
-                        <option value="Partial Prepayment">Partial Prepayment</option>
-                        <option value="Payment upon Completion">Payment upon Completion</option>
-                    </select>
+                    @foreach (var method in paymentMethods)
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="payment-@method" name="paymentMethod" value="@method" @onchange="(e) => selectedPaymentMethod = method" checked="@(selectedPaymentMethod == method)" />
+                            <label class="form-check-label" for="payment-@method">@method</label>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group">
                     <label>Source of Materials for Work:</label>
-                    <select class="form-control" @bind="selectedMaterialSource">
-                        <option value="">Select a source of materials</option>
-                        <option value="Supplier Provided">Supplier Provided</option>
-                        <option value="Client Provided">Client Provided</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    @foreach (var source in materialSources)
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="source-@source" name="materialSource" value="@source" @onchange="(e) => selectedMaterialSource = source" checked="@(selectedMaterialSource == source)" />
+                            <label class="form-check-label" for="source-@source">@source</label>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group">
                     <label>Delivery Options:</label>
-                    <select class="form-control" @bind="selectedDeliveryOption">
-                        <option value="">Select a delivery option</option>
-                        <option value="Standard Delivery">Standard Delivery</option>
-                        <option value="Express Delivery">Express Delivery</option>
-                        <option value="Pickup">Pickup</option>
-                    </select>
+                    @foreach (var option in deliveryOptions)
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="delivery-@option" name="deliveryOption" value="@option" @onchange="(e) => selectedDeliveryOption = option" checked="@(selectedDeliveryOption == option)" />
+                            <label class="form-check-label" for="delivery-@option">@option</label>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group">
@@ -78,24 +110,24 @@
                     <InputDate class="form-control" @bind-Value="deliveryDeadline" />
                 </div>
 
-                <div class="checkbox">
-                    <InputCheckbox @bind-Value="penaltyAgreement" />
-                    <label>I agree to the penalties stipulated for delivery delays.</label>
+                <div class="form-check">
+                    <InputCheckbox class="form-check-input" id="penaltyAgreement" @bind-Value="penaltyAgreement" />
+                    <label class="form-check-label" for="penaltyAgreement">I agree to the penalties stipulated for delivery delays.</label>
                 </div>
 
-                <div class="checkbox">
-                    <InputCheckbox @bind-Value="bonusAgreement" />
-                    <label>I agree to receive bonuses for early delivery.</label>
+                <div class="form-check">
+                    <InputCheckbox class="form-check-input" id="bonusAgreement" @bind-Value="bonusAgreement" />
+                    <label class="form-check-label" for="bonusAgreement">I agree to receive bonuses for early delivery.</label>
                 </div>
 
-                <div class="checkbox">
-                    <InputCheckbox @bind-Value="arbitrationAgreement" />
-                    <label>I agree to the appointment of an arbitrator for disputes.</label>
+                <div class="form-check">
+                    <InputCheckbox class="form-check-input" id="arbitrationAgreement" @bind-Value="arbitrationAgreement" />
+                    <label class="form-check-label" for="arbitrationAgreement">I agree to the appointment of an arbitrator for disputes.</label>
                 </div>
 
                 <div class="form-group">
                     <label>File Attachment:</label>
-                    <InputFile @bind-Value="file" />
+                    <InputFile @bind-value="file" />
                 </div>
 
                 <div class="form-group">
@@ -109,7 +141,7 @@
 
         <div class="form">
             <div class="form-section">
-                <h2>Shipping address</h2>
+                <h2 class="mb-4">Shipping address</h2>
 
                 <div class="form-group">
                     <label>Address:</label>
@@ -117,12 +149,12 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label>City:</label>
                         <InputText class="form-control" @bind-Value="shippingCity" />
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label>State:</label>
                         <InputText class="form-control" @bind-Value="shippingState" />
                     </div>
@@ -133,8 +165,6 @@
 </div>
 
 @code {
-
-    // Define your model properties here
     [Parameter]
     public int? id { get; set; }
     private string? selectedCategory;
@@ -143,7 +173,6 @@
     private string? shippingCity;
     private string? shippingState;
     private int quantity;
-    //private string email;
     private string? selectedPaymentMethod;
     private string? selectedMaterialSource;
     private string? selectedDeliveryOption;
@@ -153,27 +182,26 @@
     private bool arbitrationAgreement;
     private IBrowserFile? file;
     private string? additionalInfo;
-    //private bool formSubmitted = false;
     private string? exampleData;
-    //private EmailRequestDTO? emailRequest;
     private string cacheKey = "unique-id";
     private int id_local;
 
+    private List<string> categories = new List<string> { "Welding", "Metalworking", "Sewing" };
+    private List<string> budgetRanges = new List<string> { "Under $1,000", "$1,000 - $5,000" };
+    private List<string> paymentMethods = new List<string> { "Prepayment", "Partial Prepayment", "Payment upon Completion" };
+    private List<string> materialSources = new List<string> { "Supplier Provided", "Client Provided", "Other" };
+    private List<string> deliveryOptions = new List<string> { "Standard Delivery", "Express Delivery", "Pickup" };
 
-    /// this event occurrence first
     protected override void OnInitialized()
     {
-        /// if new increment cache.count
-        id_local =(id.HasValue? id.Value: cacheService.Count+1);
+        id_local = (id.HasValue ? id.Value : cacheService.Count + 1);
         cacheKey = $"cach_key_id_{id_local}";
-        
-        //id=0;
-        if(id.HasValue)
+
+        if (id.HasValue)
         {
-            //exampleData = "Test";// ExampleService.GetExampleData();
             _logger.LogInformation($"OnInitialized, cacheKey:{cacheKey}");
             WorkRequest? workRequest = cacheService.Get<WorkRequest>(cacheKey) as WorkRequest;
-            if(workRequest != null)
+            if (workRequest != null)
             {
                 _logger.LogInformation("workRequest is not null");
 
@@ -194,13 +222,12 @@
                 shippingState = workRequest.ShippingState;
             }
         }
-       ///
- }
- 
+    }
+
     private async Task SubmitForm()
     {
         WorkRequest workRequest = new WorkRequest
-           {
+        {
             SelectedCategory = selectedCategory,
             SelectedBudgetRange = selectedBudgetRange,
             Quantity = quantity,
@@ -219,30 +246,22 @@
         };
         _logger.LogInformation($"cacheKey before insert into cache:{cacheKey}");
 
-         cacheService.Set(cacheKey, workRequest, TimeSpan.FromMinutes(10));
+        cacheService.Set(cacheKey, workRequest, TimeSpan.FromMinutes(10));
 
         _logger.LogInformation($"cacheKey after insert into cache:{cacheKey}");
 
         await Task.FromResult<string>("Test");
     }
 
-
-    ///
     protected override void OnAfterRender(bool firstRender)
     {
-          // Display an alert after form submission
-        // await JSRuntime.InvokeVoidAsync("alert", "Email sent successfully!");
         if (firstRender)
         {
             _logger.LogInformation($"Component rendered successfully,{firstRender} ");
         }
         else
         {
-            // Try to get the data from the cache
             _logger.LogInformation($"Component else rendered successfully,{firstRender} ");            
         }
     }
-
- 
 }
-
